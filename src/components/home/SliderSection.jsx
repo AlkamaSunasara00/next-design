@@ -8,7 +8,6 @@ export default function SliderSection() {
       <h1>SliderSection SECTION</h1>
        <Button
               variant="secondry"
-              onClick={() => alert("Hero button clicked")}
             >
               Get Started
             </Button>

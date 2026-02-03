@@ -9,7 +9,6 @@ export default function HeroSection() {
 
       <Button
         variant="primary"
-        onClick={() => alert("Hero button clicked")}
       >
         Get Started
       </Button>

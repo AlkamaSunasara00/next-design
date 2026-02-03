@@ -1,66 +1,43 @@
+@import "../assets/styles/common/button.css";
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --primary: #2fa4ff;
+  --primary-dark: #1c84e3;
+  --primary-soft: #e9f5ff;
+
+  /* Backgrounds */
+  --bg-main: #f3f9ff;
+  --bg-section: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.65);
+  --bg-footer: #eaf4ff;
+
+  /* Text */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+
+  /* Borders & lines */
+  --border-soft: #dbeafe;
+  --border-light: #e5e7eb;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-glass: 0 10px 40px rgba(0,0,0,0.15);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: var(--text-main);
+  font-family: "Inter", Arial, sans-serif;
+  margin: 0;
 }
-
-/* Base button */
-.btn {
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-/* Primary */
-.btn-primary {
-  background: linear-gradient(135deg, #6a9dd1, #155eb1);
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
-  border-radius: 4px;
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.45);
-}
-.btn-secondry {
-  background: linear-gradient(135deg, #6a9dd1, #155eb1);
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
-  border-radius: 16px;
-
-}
-
-.btn-secondry:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.45);
-}
-
