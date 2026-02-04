@@ -2,6 +2,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useRef } from "react";
+import AdventureCard from "./AdventureCard";
 
 const items = [
   {
@@ -62,7 +63,7 @@ export default function AdventureTypeSlider() {
             {items.map((item, i) => (
               <div
                 key={i}
-                className="adventure-card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 snap-start relative overflow-hidden rounded-xl"
+                className="adventure-card max-w-[23.2%] sm:w-1/2 md:w-1/3 lg:w-1/4 snap-start relative overflow-hidden rounded-xl"
               >
                 <div className="relative w-full h-[220px]">
                   <Image

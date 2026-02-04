@@ -15,7 +15,7 @@ export default function TicketPackageCard({ p, sponsored = false }) {
                 </div>
 
                 {sponsored && (
-                    <div className="absolute -top-[-6px] -left-[10px] z-30">
+                    <div className="absolute -top-[-6px] -left-[6px] z-30">
                         <div className="relative">
 
                             {/* main label */}
