@@ -1,0 +1,122 @@
+.navbar-wrapper {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  width: 92%;
+  max-width: 72rem;
+  padding: 0 8px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid var(--border-soft);
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+/* Center links */
+.navbar-links {
+  display: flex;
+  gap: 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background-color: var(--primary-soft);
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.nav-item a {
+  color: var(--text-main);
+  white-space: nowrap;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.nav-icon {
+  font-size: 16px;
+  color: var(--text-main);
+  transition: color .2s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-1px);
+  background-color: var(--primary-soft-hover, rgba(0,0,0,0.06));
+}
+
+.nav-item:hover a,
+.nav-item:hover .nav-icon {
+  color: var(--primary);
+}
+
+.navbar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--text-main);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navbar-btn:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.navbar-icon {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar-btn span {
+    display: none;
+  }
+}
