@@ -18,7 +18,6 @@ export default function HeroSection() {
     <>
       {/* HERO */}
       <section className="relative z-20 w-full h-[45vh] min-h-[400px] flex items-center justify-center overflow-visible">
-
         {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -32,22 +31,22 @@ export default function HeroSection() {
 
         {/* Text */}
         <div className="relative z-10 flex flex-col items-center text-center max-w-5xl px-4">
-          <h1 className="text-white font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 drop-shadow-xl">
+          <h1 className="text-white font-serif drop-shadow-xl mb-4">
             ADVENTURE TRIPS IN INDIA
           </h1>
 
-          <p className="text-white/90 text-xs sm:text-sm md:text-base font-medium tracking-wider mb-10">
-            Fixed itineraries • Optional add-ons • Instant confirmation • Verified partners
-          </p>
+          <h4 className="text-white/90 font-extralight tracking-wider mb-10">
+            Fixed itineraries • Optional add-ons • Instant confirmation •
+            Verified partners
+          </h4>
         </div>
 
-        {/* Floating Desktop Search */}
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full px-4 z-50 hidden md:flex justify-center">
-          <div className="mx-auto max-w-5xl bg-white rounded-full shadow-2xl py-2 px-3 flex items-center">
-
-            {/* Where */}
+          <div className="mx-auto max-w-5xl bg-white rounded-full shadow-2xl py-2 px-3 flex items-center ">
             <div className="flex-1 flex flex-col text-left px-5 border-r border-gray-200">
-              <label className="text-[10px] font-bold text-gray-900 uppercase mb-0.5">Where</label>
+              <label className="text-[10px] font-bold text-gray-900 uppercase mb-0.5">
+                Where
+              </label>
               <input
                 type="text"
                 placeholder="Search destinations"
@@ -116,7 +115,18 @@ export default function HeroSection() {
             {/* Button */}
             <button
               onClick={handleSearch}
-              className="ml-2 bg-[#00AEEF] hover:bg-[#009bd6] text-white font-bold text-sm px-8 py-3.5 rounded-full transition shadow-md"
+              className="
+    ml-2
+    text-white font-bold text-sm
+    px-8 py-3.5 rounded-full
+    bg-gradient-to-r
+    from-[#00C6FF]
+    to-[#0072FF]
+    hover:from-[#00B2E6]
+    hover:to-[#005DE0]
+    transition-all duration-300
+    shadow-lg
+  "
             >
               Search
             </button>
@@ -124,21 +134,82 @@ export default function HeroSection() {
         </div>
       </section>
 
-      {/* Mobile Search Card */}
-      <div className="md:hidden -mt-4 px-4">
-        <div className="mx-auto max-w-sm bg-white rounded-xl p-4 shadow-xl space-y-3">
+      <div className="md:hidden relative mt-6 mb-6 px-4">
+        <div className="mx-auto max-w-sm bg-white/95 backdrop-blur-lg rounded-2xl p-5 shadow-2xl space-y-4">
+          {/* Where */}
           <input
             type="text"
             placeholder="Search destinations"
-            className="w-full border rounded px-3 py-2"
+            className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm outline-none"
+            value={searchData.destination}
+            onChange={(e) =>
+              setSearchData({ ...searchData, destination: e.target.value })
+            }
           />
-          <select className="w-full border rounded px-3 py-2">
-            <option>Select package</option>
-          </select>
-          <select className="w-full border rounded px-3 py-2">
-            <option>Select days</option>
-          </select>
-          <button className="w-full bg-[#00AEEF] text-white py-3 rounded-xl font-bold">
+
+          {/* Type + Days */}
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-xs font-semibold text-gray-600 mb-1 block">
+                Type
+              </label>
+              <select
+                className="w-full border border-gray-200 rounded-xl px-3 py-3 text-sm"
+                value={searchData.packageType}
+                onChange={(e) =>
+                  setSearchData({ ...searchData, packageType: e.target.value })
+                }
+              >
+                <option value="">Select</option>
+                <option value="trekking">Trekking</option>
+                <option value="camping">Camping</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="text-xs font-semibold text-gray-600 mb-1 block">
+                Days
+              </label>
+              <select
+                className="w-full border border-gray-200 rounded-xl px-3 py-3 text-sm"
+                value={searchData.days}
+                onChange={(e) =>
+                  setSearchData({ ...searchData, days: e.target.value })
+                }
+              >
+                <option value="">Select</option>
+                <option value="1-3">1–3</option>
+                <option value="4-7">4–7</option>
+              </select>
+            </div>
+          </div>
+
+          {/* More Filters */}
+          <div>
+            <label className="text-xs font-semibold text-gray-600 mb-1 block">
+              More Filters
+            </label>
+            <select
+              className="w-full border border-gray-200 rounded-xl px-3 py-3 text-sm"
+              value={searchData.filters}
+              onChange={(e) =>
+                setSearchData({ ...searchData, filters: e.target.value })
+              }
+            >
+              <option value="">Select</option>
+              <option value="budget">Budget</option>
+              <option value="luxury">Luxury</option>
+            </select>
+          </div>
+
+          {/* Button */}
+          <button
+            onClick={handleSearch}
+            className="w-full text-white font-bold py-3.5 rounded-xl
+                 bg-gradient-to-r from-[#00C6FF] to-[#0072FF]
+                 hover:from-[#00B2E6] hover:to-[#005DE0]
+                 shadow-lg transition"
+          >
             Search
           </button>
         </div>

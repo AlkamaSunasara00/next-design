@@ -54,7 +54,7 @@ export default function AlsoLikeSection() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-b from-white to-sky-50 py-16 px-4 sm:px-8">
+    <section className="w-full bg-gradient-to-b from-white to-sky-50 py-16 px-4 sm:px-13">
       <div className="max-w-7xl mx-auto space-y-14">
 
         {/* HOW IT WORKS */}
