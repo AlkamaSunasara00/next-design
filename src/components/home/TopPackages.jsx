@@ -157,7 +157,7 @@ export default function TopPackages() {
   }, []);
 
   return (
-    <section className="py-16 px-2 sm:px-13 lg:px-13">
+    <section className="py-16 px-6 sm:px-13 lg:px-13">
       <TicketClipDef />
 
       <div
