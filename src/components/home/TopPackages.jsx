@@ -3,15 +3,18 @@ import { useState, useRef, useEffect } from "react";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
 import SliderArrows from "../ui/SlideArrows";
+import TicketPackageCard from "@/components/ui/TicketPackageCard";
+
+
 
 /* EXACT ticket cut geometry */
 function TicketClipDef() {
-  const W = 376; // EXACT card width
-  const H = 320; // EXACT ticket body height
+  const W = 317;   // EXACT card width
+  const H = 320;   // EXACT ticket body height
 
-  const smallTop = [20, 52, 82];
+  const smallTop = [20, 51, 82];
   const bigMid = [127];
-  const smallBot = [182, 215, 245];
+  const smallBot = [182, 213.5, 245];
 
   const smallR = 11;
   const bigR = 22;
@@ -183,82 +186,9 @@ export default function TopPackages() {
           className="flex gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2"
         >
           {packages.map((p) => (
-            <div key={p.id} className="flex-shrink-0 snap-start w-[376px]">
-              {/* IMAGE */}
-              <div className="package-image-warapper relative h-[240px] rounded-[6px] overflow-hidden">
-                <Image
-                  src={p.image}
-                  alt={p.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 376px"
-                  priority={p.id === 1}
-                />
-              </div>
-
-              {/* TICKET CARD */}
-              <div className="ticket-shell">
-                <div
-                  className="ticket-body"
-                  style={{ clipPath: "url(#ticket-scallop)" }}
-                >
-                  <div className="px-[25px] py-[15px]">
-                    <div className="flex justify-between items-start mb-1">
-                      <h3 className="font-bold text-[17px] leading-tight mb-1 text-[#0f172a]">
-                        {p.title}
-                      </h3>
-                      <span className="border border-blue-400  text-[11px]  px-2 py-[1px] rounded">
-                        {p.nights}/{p.days}
-                      </span>
-                    </div>
-                    <p className="text-[#64748b] text-[13px] mb-2">
-                      {p.location}
-                    </p>
-
-                    <div className="border-t border-dashed border-gray-300 my-3" />
-
-                    <div className="grid grid-cols-2 gap-x-3 gap-y-2 text-[13px] mb-3 ml-2 text-[#0f172a]">
-                      {p.features.map((f, i) => (
-                        <div key={i} className="flex items-start gap-2">
-                          <span className="text-gray-400 text-[10px] mt-[3px]">
-                            ●
-                          </span>
-                          <span>{f}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="bg-[#e0f2fe] px-3 py-1 border border-blue-400 rounded-sm mb-4 flex items-center justify-between gap-3">
-                      <p className="text-black text-[11px] leading-tight flex-1 w-[50%]">
-                        {p.note}
-                      </p>
-
-                      <div className="text-right flex-shrink-0 w-[50%]">
-                        <div className="font-bold text-[17px] text-[#0f172a]">
-                          ₹{p.price}{" "}
-                          <span className="font-normal text-[12px]">
-                            /Person
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2 justify-end">
-                          <span className="line-through text-[12px] text-[#94a3b8]">
-                            ₹{p.originalPrice}
-                          </span>
-                          <span className="text-[#16a34a] text-[12px] font-semibold">
-                            {p.discount}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-end">
-                      <Button variant="secondry">Search</Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <TicketPackageCard key={p.id} p={p} />
           ))}
+
         </div>
 
         <div className="flex justify-end mt-2">

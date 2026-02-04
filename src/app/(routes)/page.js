@@ -6,22 +6,23 @@ import Footer from "@/components/layout/Footer";
 import AdventureTypeSlider from "@/components/home/AdventureTypeSlider";
 import TopPackages from "@/components/home/TopPackages";
 import TravelSlider from "@/components/home/TravelSlider";
+import SponsoredPackage from "@/components/home/SponsoredPackage";
 import PageWrapper from "@/components/layout/PageWrapper";
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-
-      <PageWrapper>
-        <HeroSection />
-        <AdventureTypeSlider />
-        <TopPackages />
-        <PopularDestinations />
-        <AlsoLikeSection />
-        <TravelSlider />
-        <Footer />
-      </PageWrapper>
-    </>
-  );
+    return (
+        <>
+            <Navbar />
+            <PageWrapper>
+            <HeroSection />
+            <AdventureTypeSlider />
+            <TopPackages />
+            <SponsoredPackage />
+            <PopularDestinations />
+            <AlsoLikeSection />
+            <TravelSlider />
+            </PageWrapper>
+            <Footer />
+        </>
+    );
 }

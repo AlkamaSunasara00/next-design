@@ -164,7 +164,7 @@ function Card({ data }) {
             </div>
           </div>
 
-          <h3 className="text-[15px] font-bold text-gray-900 mt-3">
+          <h3 className="text-[15px] font-bold text-gray-900 mt-6">
             {data.name}
           </h3>
         </div>
