@@ -46,9 +46,9 @@ export default function TicketPackageCard({ p, sponsored = false }) {
                     <div className="px-[25px] py-[15px]">
 
                         <div className="flex justify-between items-start mb-1">
-                            <h3 className="font-bold text-[14px] leading-tight mb-1 text-[#0f172a]">
+                            <h5 className="font-bold text-[14px] leading-tight mb-1 text-[#0f172a]">
                                 {p.title}
-                            </h3>
+                            </h5>
                             <span className="border border-blue-400 text-[11px] px-2 py-[1px] rounded">
                                 {p.nights}/{p.days}
                             </span>
@@ -70,8 +70,10 @@ export default function TicketPackageCard({ p, sponsored = false }) {
                         </div>
 
                         <div className="bg-[#e0f2fe] px-3 py-1 border border-blue-400 rounded-sm mb-4 flex items-center justify-between gap-3">
-                            <p className="text-[#64748b] text-[11px] leading-tight flex-1 w-[60%]">
+                            <p className="text-[#64748b] leading-tight flex-1 w-[60%]">
+                                <span className="text-[11px]">
                                 {p.note}
+                                </span>
                             </p>
 
                             <div className="text-right flex-shrink-0 w-[40%]">
