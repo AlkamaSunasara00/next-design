@@ -157,11 +157,10 @@ export default function TopPackages() {
   }, []);
 
   return (
-    <div className="container">
-    <section className="py-16">
+    <section className="container py-16 ">
 
       <div
-        className=" mx-auto bg-white rounded-[28px] p-2 lg:p-8"
+        className=" bg-white rounded-[28px] p-2 lg:p-8"
         style={{
           boxShadow: "0 10px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)",
         }}

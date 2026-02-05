@@ -126,24 +126,22 @@ export default function SponsoredPackage() {
     useEffect(() => { check(); }, []);
 
     return (
-        <div className="container">
-            <section className="py-16 ">
+        <section className="container py-16 ">
 
-                <div className=" bg-white rounded-[28px] p-8 lg:p-7"
-                    style={{ boxShadow: '0 10px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div className="  bg-white rounded-[28px] p-8 lg:p-7"
+                style={{ boxShadow: '0 10px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)' }}>
 
-                    {/* Header */}
-                    <div className="flex justify-between items-center mb-10">
-                        <h2 className="text-3xl font-bold text-[#0f172a] leading-none">Sponsored Packages</h2>
-                        <div className="flex gap-3">
-                            <SliderArrows
-                                onPrev={() => move("left")}
-                                onNext={() => move("right")}
-                                disabledPrev={!canLeft}
-                                disabledNext={!canRight}
-                            />
+                {/* Header */}
+                <div className="flex justify-between items-center mb-10">
+                    <h2 className="text-3xl font-bold text-[#0f172a] leading-none">Sponsored Packages</h2>
+                    <div className="flex gap-3">
+                        <SliderArrows
+  onPrev={() => move("left")}
+  onNext={() => move("right")}
+  disabledPrev={!canLeft}
+  disabledNext={!canRight}
+/>
 
-                        </div>
                     </div>
 
                     {/* Slider */}

@@ -55,9 +55,8 @@ export default function AlsoLikeSection() {
   };
 
   return (
-    <div className="container">
-    <section className=" py-16">
-      <div className=" mx-auto space-y-14">
+    <section className="container py-16 ">
+      <div className=" space-y-14">
 
         {/* HOW IT WORKS */}
         <div
