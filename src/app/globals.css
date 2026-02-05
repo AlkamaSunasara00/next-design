@@ -6,9 +6,8 @@
 @import "../assets/styles/home/adventureTypeSlider.css";
 @import "../assets/styles/home/topPackages.css";
 
-/* =========================
-   DESIGN TOKENS
-========================= */
+
+
 :root {
   /* Brand */
   --primary: #2fa4ff;
