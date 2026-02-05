@@ -217,7 +217,8 @@ export default function TravelSlider() {
   );
 
   return (
-      <section className="container py-16">
+    <div className="container">
+      <section className="py-16">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
@@ -241,5 +242,6 @@ export default function TravelSlider() {
           </div>
         </div>
       </section>
+    </div>
   );
 }
