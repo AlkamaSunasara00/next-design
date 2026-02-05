@@ -30,7 +30,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} antialiased`}
       >
-        <TicketClipProvider />
         {children}
       </body>
     </html>
