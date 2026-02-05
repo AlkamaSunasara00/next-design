@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Button from "../ui/Button";
-import SearchDropdown from "../ui/SearchDropdown.jsx";
+import SearchDropdown from "../ui/SearchDropdown";
 
 // Multi-select dropdown component with click-outside-to-close
 function MultiSelectDropdown({ isOpen, onClose, suggestions, selectedItems, onSelect, position }) {
