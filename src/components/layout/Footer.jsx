@@ -7,9 +7,8 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <div className="container">
-        <footer className="footer">
-            <div className="footer-container max-w-7xl">
+        <footer className="footer ">
+            <div className="footer-container container">
 
                 <div className="footer-content">
 
@@ -109,7 +108,6 @@ const Footer = () => {
                 <p>Copyright © {currentYear} TravelX. All Rights Reserved.</p>
             </div>
         </footer>
-        </div>
     );
 };
 
