@@ -159,7 +159,6 @@ export default function TopPackages() {
   return (
     <div className="container">
     <section className="py-16">
-      <TicketClipDef />
 
       <div
         className=" mx-auto bg-white rounded-[28px] p-2 lg:p-8"
