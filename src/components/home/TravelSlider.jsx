@@ -232,12 +232,10 @@ export default function TravelSlider() {
 
   return (
     <div className="container">
-      <section className="py-10 sm:py-16">
-        
-        {/* RESPONSIVE HEADER FIX */}
-        <div className="flex justify-between items-center mb-10">
-          
-          <h2 className="text-2xl font-bold text-[#0f172a] leading-none">
+      <section className="">
+        {/* Header */}
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
             Top Travel Agents on TravelX
           </h2>
 
@@ -249,8 +247,8 @@ export default function TravelSlider() {
 
         {/* REAL SLIDER (NO EXTRA CARDS BELOW) */}
         <div className="overflow-hidden">
-          <div className="flex gap-6 transition-all duration-500 pb-[20px]">
-            {currentItems.map((agent) => (
+          <div className="flex gap-6 transition-all duration-500 mb-[50px]">
+            {currentItems.map((agent, i) => (
               <div
                 key={agent.id}
                 className={`
