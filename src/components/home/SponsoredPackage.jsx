@@ -114,7 +114,7 @@ export default function SponsoredPackage() {
       <section className="py-16 ">
 
         <div
-          className=" bg-white rounded-[28px] p-6 lg:p-7"
+          className=" bg-white rounded-[28px] p-6 lg:p-8"
           style={{
             boxShadow:
               "0 10px 40px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04)",
@@ -140,7 +140,7 @@ export default function SponsoredPackage() {
           <div
             ref={scrollRef}
             onScroll={check}
-            className="flex gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2 pl-[7px]"
+            className="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2  snap-start"
           >
             {packages.map((p) => (
               <TicketPackageCard key={p.id} p={p} sponsored />

@@ -139,7 +139,7 @@ export default function TopPackages() {
         <div
           ref={scrollRef}
           onScroll={check}
-          className="flex gap-8 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2"
+          className="flex gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2 snap-start "
         >
           {packages.map((p) => (
             <TicketPackageCard key={p.id} p={p} />
